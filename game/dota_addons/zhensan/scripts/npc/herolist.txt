@@ -1,0 +1,5 @@
+"CustomHeroList"
+{
+	"npc_dota_hero_invoker"		"1"//诸葛
+	"npc_dota_hero_silencer"	"1"//司马
+}

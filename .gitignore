@@ -1,0 +1,23 @@
+/*
+ 
+!.gitignore
+!.gitattributes
+ 
+# Ignore game folder, and all default dota_addons folders
+!game
+/game/*
+!/game/dota_addons
+/game/dota_addons/*
+!/game/dota_addons/zhensan
+
+ 
+ 
+# Ignore content folder, and all default dota_addons folders
+!content
+/content/*
+!/content/dota_addons
+/content/dota_addons/*
+!/content/dota_addons/zhensan
+
+game/dota_addons/zhensan/tools_thumbnail_cache.bin
+game/dota_addons/zhensan/tools_asset_info.bin

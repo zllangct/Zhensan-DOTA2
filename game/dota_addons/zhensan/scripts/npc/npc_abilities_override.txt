@@ -1,0 +1,141 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"Version"		"1"
+	
+	//诸葛 暴雷雨的马甲技能
+	"leshrac_lightning_storm"
+	{
+		"AbilityCastRange"				"9999"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"80 145 205 265"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"jump_count"			"2 3 4 5"
+			}
+			
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"500"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"jump_delay"			"0.25 0.25 0.25 0.25"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"slow_duration"			"0.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_movement_speed"	"0"
+			}
+		}
+	}
+	//诸葛雾隐的马甲技能
+	"mirana_invis"
+	{
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fade_delay"			"3 1 0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"10.0 15.0 20.0"
+			}
+		}
+	}
+	//诸葛雷霆的马甲技能
+	"zuus_thundergods_wrath"
+	{
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"true_sight_radius"		"0 0 0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sight_radius_day"		"1000 1000 1000 1000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sight_radius_night"	"1000 1000 1000 1000"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sight_duration"		"3.0 3.0 3.0 3.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"175 250 325"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_scepter"		"175 250 325"
+			}
+		}
+	}
+}

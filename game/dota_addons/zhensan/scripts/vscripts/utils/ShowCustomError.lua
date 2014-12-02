@@ -1,0 +1,1 @@
+-- FireGameEvent( 'custom_error_show', { player_ID = caster:GetPlayerID(), _error = "#sniper_hava_no_bullet" } )

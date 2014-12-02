@@ -1,0 +1,125 @@
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// 诸葛
+	//=================================================================================================================
+	"npc_zs_hero_zhuge"
+	{
+		"override_hero"				"npc_dota_hero_invoker"
+		"AbilityLayout"				"5"
+		"Ability1"					"Zhuge_Baoleiyu"		//暴雷雨
+		"Ability2"					"Zhuge_Jidongningjie"	//急冻凝结
+		"Ability3"					"Zhuge_Jufeng"			//飓风
+		"Ability4"					"Zhuge_Tianbian"		//天变
+		"Ability5"					"Zhuge_Wolongguangxian"	//卧龙光纤
+		"Ability6"					"attribute_bonus"		//+
+		"Ability7"					"Zhuge_Tianbian_Wu"		//雾
+		"Ability8"					"Zhuge_Tianbian_Yu"		//雨
+		"Ability9"					"Zhuge_Tianbian_Xue"	//雪
+		"Ability10"					"Zhuge_Tianbian_Cancel"	//取消
+		"Ability11"					"Zhuge_Wuyin"			//雾隐
+		"Ability12"					"Zhuge_Leiting"			//雷霆
+		"Ability13"					"Zhuge_Bingxuebao"		//冰雪爆
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"20"		// Damage range min.
+		"AttackDamageMax"			"26"		// Damage range max.
+		"AttackRate"				"1.64"			// Speed of attack.
+		"AttackAnimationPoint"		"0.55"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileSpeed"			"900"		// Speed of projectile.
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributeBaseStrength"		"19"			// Base strength
+		"AttributeStrengthGain"		"1.6"			// Strength bonus per level.
+		"AttributeBaseIntelligence"	"26"			// Base intelligence
+		"AttributeIntelligenceGain"	"3.4"			// Intelligence bonus per level.
+		"AttributeBaseAgility"		"15"			// Base agility
+		"AttributeAgilityGain"		"1.0"			// Agility bonus per level.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"300"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"		// Base health.
+		"StatusHealthRegen"			"0.25"			// Health regeneration rate.
+		"StatusMana"				"0"		// Base mana.
+		"StatusManaRegen"			"0.01"		// Mana regeneration rate.
+
+
+	}
+	//=================================================================================================================
+	// 司马
+	//=================================================================================================================
+	"npc_zs_hero_sima"
+	{
+		"override_hero"				"npc_dota_hero_silencer"
+		"AbilityLayout"				"4"
+		"Ability1"					"Simayi_Yanjibo"
+		"Ability2"					"Simayi_Huoyanyu"
+		"Ability3"					"Simayi_Yetaihuo"		
+		"Ability4"					"Simayi_Xingluo"	
+		"Ability5"					"attribute_bonus"
+		"Ability6"					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"Ability11"					""
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+		"Ability15"					""
+		"Ability0"					""
+
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"19"		// Damage range min.
+		"AttackDamageMax"			"27"		// Damage range max.
+		"AttackRate"				"2.60"			// Speed of attack.
+		"AttackAnimationPoint"		"0.46"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"750"		// Range within a target can be acquired.
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileSpeed"			"900"		// Speed of projectile.
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributeBaseStrength"		"18"			// Base strength
+		"AttributeStrengthGain"		"1.8"			// Strength bonus per level.
+		"AttributeBaseIntelligence"	"26"			// Base intelligence
+		"AttributeIntelligenceGain"	"3.2"			// Intelligence bonus per level.
+		"AttributeBaseAgility"		"16"			// Base agility
+		"AttributeAgilityGain"		"1.0"			// Agility bonus per level.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"300"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"		// Base health.
+		"StatusHealthRegen"			"0.25"			// Health regeneration rate.
+		"StatusMana"				"100"		// Base mana.
+		"StatusManaRegen"			"0.01"		// Mana regeneration rate.
+	}
+}
