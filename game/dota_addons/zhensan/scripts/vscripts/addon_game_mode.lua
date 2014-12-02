@@ -94,6 +94,8 @@ function ZhensanGameMode:InitGameMode()
     GameRules:SetPreGameTime(40)
     -- 设置允许选择相同英雄
     GameRules:SetSameHeroSelectionEnabled(true)
+    -- 设置不允许使用储藏处
+    GameRules:SetStashPurchasingDisabled(true)
 
     -- 监听游戏阶段变更事件
     ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(ZhensanGameMode, "OnGameRuleStateChanged"), self)
