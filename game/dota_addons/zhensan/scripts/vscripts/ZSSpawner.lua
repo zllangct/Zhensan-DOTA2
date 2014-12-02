@@ -96,6 +96,26 @@ function ZSSpawner:Spawn()
     end
 end
 
+-- 在某个刷怪点刷怪，并让他向敌方开始进军的API
+function ZSSpawner:SpawnUnitAtShuTop(unit_name)
+    self:DoSpawn(self.__spawners["shu_top"]:GetOrigin() + RandomVector(30), unit_name, self.__target["shu_top"], DOTA_TEAM_GOODGUYS, self.__creature_levelup)
+end
+function ZSSpawner:SpawnUnitAtShuMid(unit_name)
+    self:DoSpawn(self.__spawners["shu_mid"]:GetOrigin() + RandomVector(30), unit_name, self.__target["shu_mid"], DOTA_TEAM_GOODGUYS, self.__creature_levelup)
+end
+function ZSSpawner:SpawnUnitAtShuBot(unit_name)
+    self:DoSpawn(self.__spawners["shu_bot"]:GetOrigin() + RandomVector(30), unit_name, self.__target["shu_bot"], DOTA_TEAM_GOODGUYS, self.__creature_levelup)
+end
+function ZSSpawner:SpawnUnitAtWeiTop(unit_name)
+    self:DoSpawn(self.__spawners["wei_top"]:GetOrigin() + RandomVector(30), unit_name, self.__target["wei_top"], DOTA_TEAM_BADGUYS, self.__creature_levelup)
+end
+function ZSSpawner:SpawnUnitAtWeiMid(unit_name)
+    self:DoSpawn(self.__spawners["wei_mid"]:GetOrigin() + RandomVector(30), unit_name, self.__target["wei_mid"], DOTA_TEAM_BADGUYS, self.__creature_levelup)
+end
+function ZSSpawner:SpawnUnitAtWeiBot(unit_name)
+    self:DoSpawn(self.__spawners["wei_bot"]:GetOrigin() + RandomVector(30), unit_name, self.__target["wei_bot"], DOTA_TEAM_BADGUYS, self.__creature_levelup)
+end
+
 -- [Comment]
 -- 刷一个小兵的函数，在其他地方也可以调用
 -- spawn_location: 刷怪地点

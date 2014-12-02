@@ -10,6 +10,8 @@ require('abilities/AbilityCore')
 require('Lumber')
 -- 载入平衡性常数修正
 require('ParaAdjuster')
+-- 载入物品核心
+require('items/ItemCore')
 
 -- 初始化真三游戏模式
 if ZhensanGameMode == nil then
@@ -106,6 +108,9 @@ function ZhensanGameMode:InitGameMode()
     Lumber:Init()
     -- 初始化平衡性常数修正
     ParaAdjuster:Init()
+    -- 初始化物品核心
+    ItemCore:Init()
+    
     -- 设置力量平衡性常数19.12
     ParaAdjuster:SetStrToHealth(19.12)
     -- 设置智力提供魔法常数13.05

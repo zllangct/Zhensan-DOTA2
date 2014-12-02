@@ -1,0 +1,717 @@
+<!-- schema text {7e125a45-3d83-4043-b292-9e24f8ef27b4} generic {198980d8-3a93-4919-b4c6-dd1fb07a3a4b} -->
+CVModel CVModel_0
+{
+	CVmeshList m_meshList = CVmeshList
+	{
+		CVmesh[] m_meshList = 
+		[
+			CVmesh
+			{
+				string m_meshName = "creep_range_shu"
+				string m_meshFile = "models/creeps/shu/creep_range_shu.smd"
+				string m_materialSearchPath = "materials/models/creeps/shu/"
+				bool m_bSkinParentedObjects = true
+				bool m_bExpensiveTangents = false
+				bool m_bExpensiveVertices = false
+				CVmorphInfo* m_pMorphInfo = NULL
+			}
+		]
+	}
+	CVphysicsMeshList m_physicsMeshList = CVphysicsMeshList
+	{
+		CVphysicsMesh[] m_meshList = 
+		[
+			
+		]
+	}
+	CVmodelInfo* m_pModelInfo = NULL
+	CVhitBoxSetListReference[] m_pHitBoxSetLists = 
+	[
+		CVhitBoxSetListReference
+		{
+			CVhitBoxSetList* m_pObject = &CVhitBoxSetList_0
+			string m_sFileName = ""
+		}
+	]
+	CVattachmentListReference[] m_pAttachmentLists = 
+	[
+		CVattachmentListReference
+		{
+			CVattachmentList* m_pObject = &CVattachmentList_0
+			string m_sFileName = ""
+		}
+	]
+	CVanimGroupReference[] m_pAnimGroups = 
+	[
+		CVanimGroupReference
+		{
+			CVanimGroup* m_pObject = &CVanimGroup_0
+			string m_sFileName = ""
+		}
+	]
+	CVNodeMaterialGroupListReference m_pMaterialGroupList = CVNodeMaterialGroupListReference
+	{
+		NodeMaterialGroupList_t* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVMeshGroupListReference m_pMeshGroupList = CVMeshGroupListReference
+	{
+		MeshGroupList_t* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVLODGroupListReference m_pLodGroupList = CVLODGroupListReference
+	{
+		LODGroupList_t* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVpropBreakableListReference m_pPropBreakableList = CVpropBreakableListReference
+	{
+		CVpropBreakableList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVpropDataListReference m_pPropDataList = CVpropDataListReference
+	{
+		CVpropDataList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVConstraintListReference[] m_pConstraintLists = 
+	[
+		
+	]
+	string m_collision = ""
+	string m_sMDLFilename = ""
+	string[] m_scriptFiles = 
+	[
+		
+	]
+	CVMaterialRemapList* m_pMaterialRemapList = NULL
+	float m_flFbxScale = 1.000000
+}
+
+CVhitBoxSetList CVhitBoxSetList_0
+{
+	CVhitBoxSet[] m_HitBoxSets = 
+	[
+		CVhitBoxSet
+		{
+			string m_name = "default"
+			CVhitBox[] m_HitBoxes = 
+			[
+				CVhitBox
+				{
+					string m_name = "root"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "root"
+					float(3) m_vMinBounds = ( -2.832677, -2.688988, -2.938611 )
+					float(3) m_vMaxBounds = ( 3.176871, 7.902815, 1.715736 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Uppertorso"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Uppertorso"
+					float(3) m_vMinBounds = ( -2.885639, -1.758665, -2.770287 )
+					float(3) m_vMaxBounds = ( 3.167277, 7.156576, 2.891889 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Neck"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Neck"
+					float(3) m_vMinBounds = ( -1.107721, -0.971867, -1.842089 )
+					float(3) m_vMaxBounds = ( 1.126410, 1.098019, 1.366065 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "LCollar"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "LCollar"
+					float(3) m_vMinBounds = ( -1.651413, 1.688935, -1.974420 )
+					float(3) m_vMaxBounds = ( 1.390173, 4.501878, 1.963822 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "RPelvis"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "RPelvis"
+					float(3) m_vMinBounds = ( 1.496023, 0.423933, -2.398804 )
+					float(3) m_vMaxBounds = ( 2.816109, 2.946485, 1.847173 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "LPelvis"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "LPelvis"
+					float(3) m_vMinBounds = ( -3.059677, 0.591595, -2.502531 )
+					float(3) m_vMaxBounds = ( -1.686892, 3.127295, 1.718969 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "RCollar"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "RCollar"
+					float(3) m_vMinBounds = ( -1.563303, 1.449971, -2.108182 )
+					float(3) m_vMaxBounds = ( 1.673580, 4.419153, 1.912512 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "LUpArm"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "LUpArm"
+					float(3) m_vMinBounds = ( -1.541691, 0.011277, -1.001356 )
+					float(3) m_vMaxBounds = ( 1.201561, 4.754253, 2.215146 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "RThigh"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "RThigh"
+					float(3) m_vMinBounds = ( -3.750446, 0.728596, -1.820305 )
+					float(3) m_vMaxBounds = ( 2.064767, 7.780636, 3.477572 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "LThigh"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "LThigh"
+					float(3) m_vMinBounds = ( -2.415874, 0.811031, -1.875072 )
+					float(3) m_vMaxBounds = ( 3.400099, 7.864665, 3.340358 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "RUpArm"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "RUpArm"
+					float(3) m_vMinBounds = ( -1.331345, -0.002201, -0.973800 )
+					float(3) m_vMaxBounds = ( 1.408142, 4.784185, 2.283551 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "LLowArm"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "LLowArm"
+					float(3) m_vMinBounds = ( -0.685987, 0.233047, -0.719808 )
+					float(3) m_vMaxBounds = ( 0.746956, 5.185904, 1.377445 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "RLowLeg"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "RLowLeg"
+					float(3) m_vMinBounds = ( -1.528719, 0.575315, -3.099351 )
+					float(3) m_vMaxBounds = ( 2.564918, 10.546770, 1.645362 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "LLowLeg"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "LLowLeg"
+					float(3) m_vMinBounds = ( -3.201209, 0.654616, -3.360134 )
+					float(3) m_vMaxBounds = ( 0.881315, 10.612696, 1.406865 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "head"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "head"
+					float(3) m_vMinBounds = ( -1.774514, -0.495205, -2.964858 )
+					float(3) m_vMaxBounds = ( 1.843851, 4.939388, 1.903561 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "RLowArm"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "RLowArm"
+					float(3) m_vMinBounds = ( -0.787514, 0.437011, -0.383928 )
+					float(3) m_vMaxBounds = ( 0.817331, 5.366899, 1.600656 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "LHand"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "LHand"
+					float(3) m_vMinBounds = ( -1.297722, -0.035985, -2.075039 )
+					float(3) m_vMaxBounds = ( 0.381493, 3.115488, 0.529349 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "rFoot"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "rFoot"
+					float(3) m_vMinBounds = ( -1.834137, -1.048892, -1.315754 )
+					float(3) m_vMaxBounds = ( 1.060631, 4.309112, 2.522310 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "LFoot"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "LFoot"
+					float(3) m_vMinBounds = ( -1.653384, -0.840131, -1.332524 )
+					float(3) m_vMaxBounds = ( 1.199672, 4.300815, 2.548289 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "top"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "top"
+					float(3) m_vMinBounds = ( -2.000000, -2.000000, -2.000000 )
+					float(3) m_vMaxBounds = ( 2.000000, 2.000000, 2.000000 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "RHand"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "RHand"
+					float(3) m_vMinBounds = ( -0.484146, -0.222960, -1.488281 )
+					float(3) m_vMaxBounds = ( 0.608070, 3.202123, 0.759096 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Lfinger"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Lfinger"
+					float(3) m_vMinBounds = ( -2.000000, -2.000000, -2.000000 )
+					float(3) m_vMaxBounds = ( 2.000000, 2.000000, 2.000000 )
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				}
+			]
+		}
+	]
+}
+
+CVattachmentList CVattachmentList_0
+{
+	string m_name = ""
+	CVattachment[] m_attachments = 
+	[
+		CVattachment
+		{
+			string m_name = "attach_hitloc"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "Uppertorso"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_attack"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "RHand"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_attack1"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "RHand"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_attack2"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "Lfinger"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_cheast"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "RCollar"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_overhead"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "top"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		}
+	]
+}
+
+CVanimGroup CVanimGroup_0
+{
+	string m_Name = ""
+	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
+	{
+		CVReferenceSkeleton* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	{
+		CVBoneFlagList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
+	{
+		CVseqGroup* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVanimGroupReference[] m_pAnimGroups = 
+	[
+		
+	]
+	CVanim[] m_Vanim = 
+	[
+		CVanim
+		{
+			string m_Animationname = "creep_range_shu_attack"
+			string m_Filepath = "models/creeps/shu/creep_range_shu_attack.smd"
+			int m_nStartframe = 0
+			int m_nEndframe = 44
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_ATTACK"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				CMotionFrame
+				{
+					int m_nFrame = 0
+					bool m_bExtractTX = true
+					bool m_bExtractTY = true
+					bool m_bExtractTZ = false
+					bool m_bExtractRX = false
+					bool m_bExtractRY = false
+					bool m_bExtractRZ = false
+					bool m_bDiscardTX = false
+					bool m_bDiscardTY = false
+					bool m_bDiscardTZ = false
+					bool m_bDiscardRX = false
+					bool m_bDiscardRY = false
+					bool m_bDiscardRZ = false
+				}
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+		},
+		CVanim
+		{
+			string m_Animationname = "creep_range_shu_death"
+			string m_Filepath = "models/creeps/shu/creep_range_shu_death.smd"
+			int m_nStartframe = 0
+			int m_nEndframe = 90
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_DIE"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				CMotionFrame
+				{
+					int m_nFrame = 0
+					bool m_bExtractTX = true
+					bool m_bExtractTY = true
+					bool m_bExtractTZ = false
+					bool m_bExtractRX = false
+					bool m_bExtractRY = false
+					bool m_bExtractRZ = false
+					bool m_bDiscardTX = false
+					bool m_bDiscardTY = false
+					bool m_bDiscardTZ = false
+					bool m_bDiscardRX = false
+					bool m_bDiscardRY = false
+					bool m_bDiscardRZ = false
+				}
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+		},
+		CVanim
+		{
+			string m_Animationname = "creep_range_shu_idle"
+			string m_Filepath = "models/creeps/shu/creep_range_shu_idle.smd"
+			int m_nStartframe = 0
+			int m_nEndframe = 60
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = true
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_IDLE"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+		},
+		CVanim
+		{
+			string m_Animationname = "creep_range_shu_run"
+			string m_Filepath = "models/creeps/shu/creep_range_shu_run.smd"
+			int m_nStartframe = 0
+			int m_nEndframe = 25
+			float m_flFps = 60.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = true
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_RUN"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				CMotionFrame
+				{
+					int m_nFrame = 0
+					bool m_bExtractTX = true
+					bool m_bExtractTY = true
+					bool m_bExtractTZ = false
+					bool m_bExtractRX = false
+					bool m_bExtractRY = false
+					bool m_bExtractRZ = false
+					bool m_bDiscardTX = false
+					bool m_bDiscardTY = false
+					bool m_bDiscardTZ = false
+					bool m_bDiscardRX = false
+					bool m_bDiscardRY = false
+					bool m_bDiscardRZ = false
+				}
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+		}
+	]
+	string[] m_sScripts = 
+	[
+		
+	]
+}

@@ -293,9 +293,9 @@
 	"npc_zs_creep_shu_melee"
 	{
 		"BaseClass"					"npc_dota_creep_lane"	// Class of entity of link to.
-		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"	// Model.
+		"Model"						"models/creeps/shu/creep_melee_shu.vmdl"	// Model.
 		"SoundSet"					"Creep_Good_Melee"					// Name of sound set.
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"5"
 		"Level"						"1"
 		
 		// Abilities
@@ -381,9 +381,9 @@
 	"npc_zs_creep_wei_melee"
 	{
 		"BaseClass"					"npc_dota_creep_lane"	// Class of entity of link to.
-		"Model"						"models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee.vmdl"	// Model.
+		"Model"						"models/creeps/wei/creep_melee_wei.vmdl"	// Model.
 		"SoundSet"					"Creep_Bad_Melee"					// Name of sound set.
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"5"
 		"Level"						"1"
 		
 		// Abilities
@@ -468,9 +468,9 @@
 	"npc_zs_creep_shu_range"
 	{
 		"BaseClass"					"npc_dota_creep_lane"	// Class of entity of link to.
-		"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged.vmdl"	// Model.
+		"Model"						"models/creeps/shu/creep_range_shu.vmdl"	// Model.
 		"SoundSet"					"Creep_Good_Range"					// Name of sound set.
-		"ModelScale" 				".88"
+		"ModelScale" 				"5"
 		"Level"						"1"
 		
 		// Abilities
@@ -553,9 +553,9 @@
 	"npc_zs_creep_wei_range"
 	{
 		"BaseClass"					"npc_dota_creep_lane"	// Class of entity of link to.
-		"Model"						"models/creeps/lane_creeps/creep_bad_ranged/lane_dire_ranged.vmdl"	// Model.
+		"Model"						"models/creeps/wei/creep_range_wei.vmdl"	// Model.
 		"SoundSet"					"Creep_Good_Range"					// Name of sound set.
-		"ModelScale" 				".88"
+		"ModelScale" 				"5"
 		"Level"						"1"
 		
 		// Abilities
