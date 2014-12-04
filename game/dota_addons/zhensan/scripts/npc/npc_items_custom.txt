@@ -1,21 +1,1320 @@
 "DOTAAbilities"
 {
-	"creep_level_up"
+	//==================================================
+	// 下方的BE兽族商店
+	//==================================================
+	//医疗剂 - 见npc_abilities_override.txt
+	//==================================================
+	//净化药水 - 见npc_abilities_override.txt
+	//==================================================
+	//朱雀翼
+	//==================================================
+	"item_zhuqueyi"
 	{
+		"ID"				"1001"
+		"AbilityTextureName"	"item_zhuqueyi"
+
 		"BaseClass"			"item_datadriven"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"MaxLevel"		"1"
+
+		"ItemCost"			"1700"
+
 		"Modifiers"
 		{
-			"modifier_creature_level_up"
+			"modifier_zhuqueyi"
 			{
-				"IsHidden"			"0"
-				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"  
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"7"
-					"MODIFIER_PROPERTY_HEALTH_BONUS"			"40"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"	"%health_bonus"
 				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"health_bonus"		"350"
+			}
+		}
+	}
+	//==================================================
+	// 钻石
+	//==================================================
+	"item_zuanshi"
+	{
+		"ID"				"1002"
+		"AbilityTextureName"	"item_zuanshi"
+
+		"BaseClass"			"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemCost"			"1100"
+
+		"Modifiers"
+		{
+			"modifier_qinglongdan"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_BONUS"	"%health_bonus"
+					"MODIFIER_PROPERTY_MANA_BONUS"	"%mana_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"health_bonus"		"150"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"mana_bonus"		"100"
+			}
+		}
+	}
+	//==================================================
+	// 青龙胆
+	//==================================================
+	"item_qinglongdan"
+	{
+		"ID"				"1003"
+		"AbilityTextureName"	"item_qinglongdan"
+
+		"BaseClass"			"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemCost"			"1100"
+
+		"Modifiers"
+		{
+			"modifier_zuanshi"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_BONUS"	"%mana_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"mana_bonus"		"300"
+			}
+		}
+	}
+
+	//==================================================
+	// 征兵处
+	//==================================================
+	// 投石车
+	//==================================================
+	"item_toushiche"
+	{
+		"ID"			"1004"
+		"BaseClass"		"item_datadriven"
+		"AbilityTextureName"	"item_toushiche"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"			"220"//还需要12木
+	}
+	//==================================================
+	// 冲车
+	//==================================================
+	"item_chongche"
+	{
+		"ID"			"1005"
+		"BaseClass"		"item_datadriven"
+		"AbilityTextureName"	"item_chongche"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"			"240"//还需要15木
+	}
+
+	//==================================================
+	// 最下方女人
+	//==================================================
+	// 百草丸 870 4恢复
+	//==================================================
+	"item_baicaowan"
+	{
+		"ID"			"1006"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_baicaowan"
+
+		"ItemCost"			"870"
+
+		"Modifiers"
+		{
+			"modifier_baicaowan"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%health_regen"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"health_regen"		"4"
+			}
+		}
+	}
+	//==================================================
+	// 活丹 950 100%法力恢复
+	//==================================================
+	"item_huodan"
+	{
+		"ID"		"1007"
+		"BaseClass"					"item_datadriven"
+		"AbilityTextureName"		"item_huodan"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"					"950"
+
+		"Modifiers"
+		{
+			"modifier_huodan"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"	"%mana_regen"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"mana_regen"		"100"
+			}
+		}
+
+	}
+	//==================================================
+	// 加速手套 650 15%攻速
+	//==================================================
+	"item_jiasushoutao"
+	{
+		"ID"			"1008"
+		"BaseClass"					"item_datadriven"
+		"AbilityTextureName"		"item_jiasushoutao"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"					"650"
+
+		"Modifiers"
+		{
+			"modifier_jiasushoutao"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"attack_speed"		"15"
+			}
+		}
+	}
+	//==================================================
+	// 艺人面罩 400 50%魔法恢复
+	//==================================================
+	"item_yirenmianzhao"
+	{
+		"ID"		"1009"
+		"BaseClass"					"item_datadriven"
+		"AbilityTextureName"		"item_yirenmianzhao"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"					"400"
+
+		"Modifiers"
+		{
+			"modifier_yirenmianzhao"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"	"%mana_regen"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"mana_regen"		"50"
+			}
+		}
+
+	}
+	//==================================================
+	// 速度之靴 500 移动速度50
+	//==================================================
+	"item_suduzhixue"
+	{
+		"ID"		"1010"
+		"BaseClass"					"item_datadriven"
+		"AbilityTextureName"		"item_suduzhixue"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"					"500"
+
+		"Modifiers"
+		{
+			"modifier_suduzhixue"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%move_speed"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"move_speed"		"50"
+			}
+		}
+	}
+	//==================================================
+	// 恢复指环 380 每秒两点
+	//==================================================
+	"item_huifuzhihuan"
+	{
+		"ID"			"1011"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_huifuzhihuan"
+
+		"ItemCost"			"870"
+
+		"Modifiers"
+		{
+			"modifier_huifuzhihuan"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%health_regen"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"health_regen"		"2"
+			}
+		}
+	}
+	//==================================================
+	// 法师长袍 智慧+6
+	//==================================================
+	"item_fashichangpao"
+	{
+		"ID"			"1012"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_fashichangpao"
+
+		"ItemCost"			"450"
+
+		"Modifiers"
+		{
+			"modifier_fashichangpao"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"int_bonus"		"6"
+			}
+		}
+	}
+	//==================================================
+	// 铸造用锤 攻击力+5 1500
+	//==================================================
+	"item_zhuzaoyongchui"
+	{
+		"ID"			"1013"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_zhuzaoyongchui"
+
+		"ItemCost"			"1500"
+
+		"Modifiers"
+		{
+			"modifier_zhuzaoyongchui"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%dmg_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"dmg_bonus"		"5"
+			}
+		}
+	}
+	//==================================================
+	// 匕首 650 攻击力+9
+	//==================================================
+	"item_bishou"
+	{
+		"ID"			"1014"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_bishou"
+
+		"ItemCost"			"650"
+
+		"Modifiers"
+		{
+			"bishou"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%dmg_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"dmg_bonus"		"9"
+			}
+		}
+	}
+	//==================================================
+	// 铁剑 1150 攻击力+18
+	//==================================================
+	"item_tiejian"
+	{
+		"ID"			"1015"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_tiejian"
+
+		"ItemCost"			"1150"
+
+		"Modifiers"
+		{
+			"tiejian"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%dmg_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"dmg_bonus"		"18"
+			}
+		}
+	}
+	//==================================================
+	// 铁戟 1500 攻击力+20
+	//==================================================
+	"item_tieji"
+	{
+		"ID"			"1016"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_tieji"
+
+		"ItemCost"			"1500"
+
+		"Modifiers"
+		{
+			"tieji"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%dmg_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"dmg_bonus"		"20"
+			}
+		}
+	}
+	//==================================================
+	// 钢铁之锤 1650 攻击力+24
+	//==================================================
+	"item_gangtiezhichui"
+	{
+		"ID"			"1017"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_gangtiezhichui"
+
+		"ItemCost"			"1650"
+
+		"Modifiers"
+		{
+			"gangtiezhichui"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%dmg_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"dmg_bonus"		"24"
+			}
+		}
+	}
+	//==================================================
+	//月光枪 2300 攻击力+28 攻击速度+15%
+	//==================================================
+	"item_yueguangqiang"
+	{
+		"ID"			"1018"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_yueguangqiang"
+
+		"ItemCost"			"2300"
+
+		"Modifiers"
+		{
+			"yueguangqiang"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%dmg_bonus"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%atkspeed_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"dmg_bonus"		"28"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"atkspeed_bonus"	"15"
+			}
+		}
+	}
+	//==================================================
+	// 铁枪 1200 攻击速度+15%
+	//==================================================
+	"item_tieqiang"
+	{
+		"ID"			"1019"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_tieqiang"
+
+		"ItemCost"			"1200"
+
+		"Modifiers"
+		{
+			"tieqiang"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%atkspeed_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"atkspeed_bonus"	"15"
+			}
+		}
+	}
+	//==================================================
+	// 吸血匕首 1600 攻击力 +12 5%生命偷取
+	//==================================================
+	"item_xixuebishou"
+	{
+		"ID"			"1020"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_xixuebishou"
+
+		"ItemCost"			"1600"
+
+		"Modifiers"
+		{
+			"xixueboshou"
+			{
+				"Passive"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%dmg_bonus"
+				}
+				"OnDealDamage"
+				{
+					"Lifesteal"
+					{
+						"Target" 			"ATTACKER"
+						"LifestealPercent"	"%life_steal"
+					}
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"dmg_bonus"		"12"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"life_steal"	"5"
+			}
+		}
+	}
+	//==================================================
+	// 玄铁匕首 1500 攻击力+15 防御+2
+	//==================================================
+	"item_xuantiebishou"
+	{
+		"ID"			"1021"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_xuantiebishou"
+
+		"ItemCost"			"1500"
+
+		"Modifiers"
+		{
+			"xuantiebishou"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%atkspeed_bonus"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%armor_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"atkspeed_bonus"	"15"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"armor_bonus"	"2"
+			}
+		}
+	}
+	//==================================================
+	// 耐力头盔 950 防御+5 回复+2
+	//==================================================
+	"item_nailitoukui"
+	{
+		"ID"			"1022"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_nailitoukui"
+
+		"ItemCost"			"950"
+
+		"Modifiers"
+		{
+			"nailitoukui"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%health_regen"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%armor_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"atkspeed_bonus"	"2"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"armor_bonus"	"5"
+			}
+		}
+	}
+	//*****************************************************
+	//*================================================== *
+	//* 铁树枝干 50
+	//*================================================== *
+	//*================================================== *
+	//* 力量拳套 175 力量+3
+	//*================================================== *
+	//*================================================== *
+	//* 皮靴 175 敏捷+3
+	//*================================================== *
+	//*================================================== *
+	//* 智力斗篷 175 智力+3
+	//*================================================== *
+	//*================================================== *
+	//* 夜明珠 2400 全+10
+	//*================================================== *
+	//*================================================== *
+	//* 力量之斧 1000 力量+10
+	//*================================================== *
+	//*================================================== *
+	//* 盗贼短剑 1000 敏捷+10
+	//*================================================== *
+	//*****************************************************
+
+	//==================================================
+	// 否决权杖 5次消魔 ID1023
+	//==================================================
+
+
+
+	//==================================================
+	// 大斧 力量+24 3200
+	//==================================================
+	"item_dafu"
+	{
+		"ID"			"1024"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_dafu"
+
+		"ItemCost"			"3200"
+
+		"Modifiers"
+		{
+			"dafu"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%str_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"str_bonus"		"24"
+			}
+		}
+	}
+	//==================================================
+	// 黄忠弓 敏捷+24 3600
+	//==================================================
+	"item_huangzhonggong"
+	{
+		"ID"			"1025"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_huangzhonggong"
+
+		"ItemCost"			"3600"
+
+		"Modifiers"
+		{
+			"huangzhonggong"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%agi_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"agi_bonus"		"24"
+			}
+		}
+	}
+	//==================================================
+	// 史记 智力+24 2800
+	//==================================================
+	"item_shiji"
+	{
+		"ID"			"1026"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"item_shiji"
+
+		"ItemCost"			"2800"
+
+		"Modifiers"
+		{
+			"shiji"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int_bonus"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"int_bonus"		"24"
+			}
+		}
+	}
+
+	//==================================================
+	// 冰玉 全+5 15%2秒减速 TODO 2级与3级 ID 1027 - 1031
+	//==================================================
+	"item_bingyu"
+	{
+		"ID"			"1027"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityTextureName"	"item_bingyu"
+
+		"ItemCost"			"1600"
+
+		"ItemBaseLevel"                 "1"
+		"MaxUpgradeLevel"				"3"
+		"UpgradesItems"					"item_bingyu2"
+		"UpgradeRecipe"					"item_recipe_bingyu2"
+
+		"Modifiers"
+		{
+			"bingyu"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int_bonus"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%agi_bonus"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%str_bonus"
+				}
+			}
+			"bingyu_orb"
+			{
+				"Passive"				"1"
+				"IsHidden"				"0"
+				"Orb"
+				{
+					"Priority"			"DOTA_ORB_PRIORITY_ITEM"
+					"ProjectileName"	"particles/items2_fx/skadi_projectile.vpcf"
+				}
+				"OnOrbImpact"
+				{
+					"Random"
+					{
+						"Chance"	"%chance"
+						"PseudeoRandom"		"DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"Target"			"TARGET"
+								"ModifierName"		"bingyu_slow"
+								"Duration"			"%slow_duration"
+							}
+						}
+					}
+				}
+			}
+			"bingyu_slow"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"		"-100"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"int_bonus"		"5"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"agi_bonus"		"5"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"str_bonus"		"5"
+			}
+			"04"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"chance"		"15"
+			}
+			"05"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"slow_duration"	"2"
+			}
+		}
+	}
+	"item_recipe_bingyu2"
+    {
+      "ID"                            "1028"
+      "Model"                         "models/props_gameplay/recipe.mdl"
+      "BaseClass"                     "item_recipe_arcane_boots"
+      "ItemCost"                      "0"  
+      "ItemShopTags"                  ""
+      "ItemRecipe"                    "1"
+      "ItemResult"                    "item_bingyu2"
+      "ItemRequirements"
+      {
+          "01"                        "item_bingyu;item_bingyu"
+      }
+    }
+    "item_recipe_bingyu3"
+    {
+      "ID"                            "1029"
+      "Model"                         "models/props_gameplay/recipe.mdl"
+      "BaseClass"                     "item_recipe_arcane_boots"
+      "ItemCost"                      "0"  
+      "ItemShopTags"                  ""
+      "ItemRecipe"                    "1"
+      "ItemResult"                    "item_bingyu3"
+      "ItemRequirements"
+      {
+          "01"                        "item_bingyu2;item_bingyu"
+      }
+    }
+	"item_bingyu2"
+	{
+		"ID"			"1030"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityTextureName"	"item_bingyu"
+
+		"ItemCost"			"3200"
+
+		"ItemBaseLevel"                 "2"
+		"MaxUpgradeLevel"				"3"
+
+		"Modifiers"
+		{
+			"bingyu2"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int_bonus"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%agi_bonus"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%str_bonus"
+				}
+			}
+			"bingyu_orb2"
+			{
+				"Passive"				"1"
+				"IsHidden"				"0"
+				"Orb"
+				{
+					"Priority"			"DOTA_ORB_PRIORITY_ITEM"
+					"ProjectileName"	"particles/items2_fx/skadi_projectile.vpcf"
+				}
+				"OnOrbImpact"
+				{
+					"Random"
+					{
+						"Chance"	"%chance"
+						"PseudeoRandom"		"DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"Target"			"TARGET"
+								"ModifierName"		"bingyu_slow2"
+								"Duration"			"%slow_duration"
+							}
+						}
+					}
+				}
+			}
+			"bingyu_slow2"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"		"-100"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"int_bonus"		"10"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"agi_bonus"		"10"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"str_bonus"		"10"
+			}
+			"04"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"chance"		"25"
+			}
+			"05"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"slow_duration"	"2"
+			}
+		}
+	}
+	"item_bingyu3"
+	{
+		"ID"			"1031"
+		"BaseClass"		"item_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityTextureName"	"item_bingyu"
+
+		"ItemCost"			"4800"
+
+		"ItemBaseLevel"                 "3"
+		"MaxUpgradeLevel"				"3"
+
+		"Modifiers"
+		{
+			"bingyu3"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int_bonus"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%agi_bonus"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%str_bonus"
+				}
+			}
+			"bingyu_orb3"
+			{
+				"Passive"				"1"
+				"IsHidden"				"0"
+				"Orb"
+				{
+					"Priority"			"DOTA_ORB_PRIORITY_ITEM"
+					"ProjectileName"	"particles/items2_fx/skadi_projectile.vpcf"
+				}
+				"OnOrbImpact"
+				{
+					"Random"
+					{
+						"Chance"	"%chance"
+						"PseudeoRandom"		"DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"Target"			"TARGET"
+								"ModifierName"		"bingyu_slow3"
+								"Duration"			"%slow_duration"
+							}
+						}
+					}
+				}
+			}
+			"bingyu_slow3"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"		"-100"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"int_bonus"		"15"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"agi_bonus"		"15"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"str_bonus"		"15"
+			}
+			"04"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"chance"		"100"
+			}
+			"05"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"slow_duration"	"1.5"
+			}
+		}
+	}
+
+	//==================================================
+	// 烈玉 1400 攻击-3 护甲2秒
+	//==================================================
+	"item_lieyu"
+	{
+		
+	}
+
+	//==================================================
+	// 雷玉 攻击+15 1500 10 70伤害弹射3次的闪电
+	//==================================================
+
+	//==================================================
+	// 炎玉 1500 攻击+20 溅射
+	//==================================================
+
+	//==================================================
+	// 毒玉 750 5秒9点毒伤害
+	//==================================================
+
+
+	//护腕
+	//玄武甲
+
+
+
+
+	//==================================================
+	// 
+	//==================================================
+	//==================================================
+	// 风暴之杖
+	// 智慧+20，法力再生+100%。可以使用飓风术。|n可使用5次。
+	//==================================================
+	"item_fengbaozhizhang"
+	{
+		"BaseClass"		"item_datadriven"
+		"AbilityTextureName"	""
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CREEP"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+		"AbilitySharedCooldown"			"cyclone"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemCost"						"2500"
+		// "ItemShopTags"					""
+		"ItemQuality"					"artifact"//物品颜色。。。
+		"ItemAliases"					"chuifeng"
+		// "ItemBaseLevel"					"1"
+		
+		"ItemPermanent"					"1"	//设置物品为永久
+		"ItemInitialCharges"			"5"	//初始可以使用5次
+		"ItemRequiresCharges"			"1"	//设置需要充能
+		"ItemDisplayCharges"			"1"	//设置显示充能
+		// "MaxUpgradeLevel"				"2"
+		// "ItemBaseLevel"					"1"
+
+		// "UpgradesItems"					"item_diffusal_blade"
+		// "UpgradeRecipe"					"item_recipe_diffusal_blade"
+
+		"Modifiers"
+		{
+			"modifier_fengbaozhizhang_passive"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int_bonus"
+					"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"	"%mana_regen_bonus"
+				}
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile" 	"scripts/vscripts/items/Fengbaozhizhang.lua"
+				"Target"		"TARGET"
+				"Function"		"OnFengbaozhizhang"
 			}
 		}
 	}

@@ -5,15 +5,18 @@ function ItemCore:Init()
 end
 
 function ItemCore:OnItemPurchased(keys)
-	local player = EntIndexToHScript(keys.userid)
-	local item = EntIndexToHScript(keys.itemid)
-	local item_name = item:GetAbilityName()
+	for k,v in pairs(keys) do
+		print(k,v)
+	end
+	local player_id = keys.PlayerID
+	local player = PlayerResource:GetPlayer(player_id)
+	local item_name = keys.item_name
 
 	if self.__check_lumber__[item_name] then
 		if not self.__check_lumber__[item_name]:Check(player, item) then return end
 	end
 
-	if self[item_name].PurchasedHandler then
+	if self[item_name] and self[item_name].PurchasedHandler then
 		self[item_name].PurchasedHandler(player,item)
 	end
 end

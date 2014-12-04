@@ -62,6 +62,7 @@ function Precache(context)
     PrecacheUnitByNameSync("npc_dota_hero_mirana", context)
     -- 诸葛雷霆
     PrecacheUnitByNameSync("npc_dota_hero_zuus", context)
+    PrecacheUnitByNameSync("npc_dota_hero_drow_ranger", context)
 
     -- 诸葛东风
     PrecacheResource("particle", "particles/neutral_fx/tornado_ambient.vpcf", context)
@@ -94,8 +95,8 @@ function ZhensanGameMode:InitGameMode()
     GameRules:SetPreGameTime(40)
     -- 设置允许选择相同英雄
     GameRules:SetSameHeroSelectionEnabled(true)
-    -- 设置不允许使用储藏处
-    GameRules:SetStashPurchasingDisabled(true)
+    -- 设置不允许使用储藏处 API貌似不可用
+    -- GameRules:SetStashPurchasingDisabled(true)
 
     -- 监听游戏阶段变更事件
     ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(ZhensanGameMode, "OnGameRuleStateChanged"), self)

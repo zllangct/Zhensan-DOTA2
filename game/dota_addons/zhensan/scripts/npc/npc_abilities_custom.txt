@@ -578,7 +578,7 @@
 			}
 			"DelayedAction"
 			{
-				"Delay"			"1.0"
+				"Delay"			"1.05"
 				"Action"
 				{
 					"LinearProjectile"
@@ -609,7 +609,7 @@
 			}
 			"DelayedAction"
 			{
-				"Delay"			"1.15"
+				"Delay"			"1.25"
 				"Action"
 				{
 					"LinearProjectile"
@@ -1098,7 +1098,7 @@
 						{
 							"Center"		"POINT"
 							"Radius"		"350"
-							"Teams"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+							"Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 							"Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CREEP"
 						}
 						"Type"			"DAMAGE_TYPE_MAGICAL"

@@ -2,8 +2,10 @@
 "DOTAAbilities"
 {
 	"Version"		"1"
-	
+
+	//==================================================
 	//诸葛 暴雷雨的马甲技能
+	//==================================================
 	"leshrac_lightning_storm"
 	{
 		"AbilityCastRange"				"9999"
@@ -54,7 +56,10 @@
 			}
 		}
 	}
+
+	//==================================================
 	//诸葛雾隐的马甲技能
+	//==================================================
 	"mirana_invis"
 	{
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -89,7 +94,10 @@
 			}
 		}
 	}
+
+	//==================================================
 	//诸葛雷霆的马甲技能
+	//==================================================
 	"zuus_thundergods_wrath"
 	{
 		"AbilityCastPoint"				"0"
@@ -138,4 +146,99 @@
 			}
 		}
 	}
+
+	//=================================================================================================================
+	// 医疗剂
+	//=================================================================================================================
+	"item_flask"
+	{
+		"ItemCost"						"55"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"12"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"total_health"			"400"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// 净化药水
+	//=================================================================================================================
+	"item_clarity"
+	{
+		"ItemCost"						"45"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"total_mana"			"100"
+			}
+		}
+	}
+
+	"item_branches"
+	{
+		"ItemCost"		"50"
+		"AbilityTextureName"		"item_shuzhi"
+	}
+	"item_gauntlets"
+	{
+		"AbilityTextureName"		"item_liliangshoutao"
+	}
+	"item_slippers"
+	{
+		"AbilityTextureName"		"item_pixue"
+	}
+	"item_mantle"	
+	{
+		"AbilityTextureName"		"item_zhilidoupeng"
+	}
+	"item_circlet"
+	{
+		"AbilityTextureName"		"item_shihuan"
+		"ItemCost"					"170"
+	}
+	// "item_belt_of_strength"
+	// {
+	// 	"ItemCost"		""
+	// 	"AbilityTextureName"		"item_"
+	// }
+	// "item_boots_of_elves"
+	// {
+	// 	"ItemCost"		""
+	// 	"AbilityTextureName"		"item_"
+	// }
+	// "item_robe"
+	// {
+	// 	"AbilityTextureName"		"item_"
+	// 	"ItemCost"		""
+	// }
+	"item_ogre_axe"
+	{
+		"AbilityTextureName"		"item_liliangzhifu"
+	}
+	"item_blade_of_alacrity"
+	{
+		"AbilityTextureName"		"item_daozeiduanjian"
+	}
+	"item_staff_of_wizardry"		"REMOVE"
+	"item_ultimate_orb"
+	{
+		"AbilityTextureName"		"item_yemingzhu"
+		"ItemCost"		"2400"
+	}
+
 }
